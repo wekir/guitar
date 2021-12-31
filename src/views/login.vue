@@ -112,7 +112,7 @@ export default {
       }).catch(err => {
         console.log(err);
       })
-    },
+    },  
     /**
      * 短信登录按钮被点击
      */
