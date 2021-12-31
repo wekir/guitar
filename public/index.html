@@ -7,11 +7,19 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body>
+  <body style="margin: 0;">
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@varlet/ui/umd/varlet.js"></script>
+    <script>
+      const app = Vue.createApp({
+      template: '<var-button>按钮</var-button>'
+          })
+      app.use(Varlet).mount('#app')
+    </script>
   </body>
 </html>
